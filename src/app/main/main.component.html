@@ -1,0 +1,11 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+    <md-list fxFlex>
+        <md-list-item *ngFor="let m of main">
+            <img md-list-avatar src={{m.image}} alt={{m.name}}>
+            <h1 md-line> {{m.name}}</h1>
+            <p md-line>
+                <span> {{m.description}}</span>
+            </p>
+        </md-list-item>
+    </md-list>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 framed">
+            <div class="well">
+                <h3>{{about.name | uppercase}}</h3>
+                <img src="{{about.image}}" alt="{{about.name}}" class="img-responsive center-block">
+                <hr class="divider">
+                <p>{{about.description}}</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 framed">
+            <div class="well">
+                <h3>{{web.name | uppercase}}</h3>
+                <a href="{{web.link}}" target="_blank"><img src="{{web.image}}" alt="{{web.name}}"></a>
+                <hr class="divider">
+                <p>{{web.description}}</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 framed">
+            <div class="well">
+                <h3>{{support.name | uppercase}}</h3>
+                <img src="{{support.image}}" alt="{{support.name}}">
+                <hr class="divider">
+                <p>{{support.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

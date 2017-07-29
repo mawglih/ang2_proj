@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 align-self-center">
+            <h1 class="text-center">Website Order Qustionnaire</h1>
+            <hr>
+            <form novalidate [formGroup]="questForm" (ngSubmit)="onSubmit()" class="well quesform">
+                <md-input-container class="full-width">
+                    <input mdInput formControlName="name" placeholder="Your name" type="text" required>
+                </md-input-container>
+                <md-input-container class="full-width">
+                    <input mdInput formControlName="company" placeholder="Your company" type="text" required>
+                </md-input-container>
+                <md-input-container class="full-width">
+                    <input mdInput formControlName="email" placeholder="Your email" type="email" required>
+                </md-input-container>
+                <md-input-container class="full-width">
+                    <input mdInput formControlName="telephone" placeholder="Your telephone number" type="tel" required>
+                </md-input-container>
+                <md-input-container class="full-width">
+                    <input mdInput formControlName="websiteCurName" placeholder="Your current website name" type="text" required>
+                </md-input-container>
+                <md-input-container class="full-width">
+                    <input mdInput formControlName="websitePurpose" placeholder="Your website purpose" type="text" required>
+                </md-input-container>
+                <h3> Please select what would you like to add to your website</h3>
+                <div *ngFor="let e of elements" class="full-width">
+                    <label> 
+                    <md-checkbox formControlName="elements" >
+                    {{e.name}}
+                    </md-checkbox>
+                  </label>
+                </div>
+                <md-input-container class="full-width">
+                    <textarea mdInput formControlName="message" placeholder="Additional information" rows="15">
+                    </textarea>
+                </md-input-container>
+                <button type="submit" md-button class="background-primary text-floral-white"> Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
